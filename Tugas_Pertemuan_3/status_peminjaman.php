@@ -32,7 +32,7 @@
                 if ($buku_terlambat > 0) {
                     $izin = "Tidak Bisa Pinjam";
                     $status = "Terlambat";
-                    $peringatan = "Masih ada buku yang belum dikembalikan.";
+                    $peringatan = "Anda masih memilki buku yang belum dikembalikan.";
                     $denda = $buku_terlambat * $hari_keterlambatan * 1000;
 
                     if ($denda > 50000) {
@@ -41,7 +41,7 @@
                 } elseif ($total_pinjaman >= 3) {
                     $izin = "Tidak Bisa Pinjam";
                     $status = "Penuh";
-                    $peringatan = "Sudah mencapai batas maksimal peminjaman.";
+                    $peringatan = "Anda sudah mencapai batas maksimal peminjaman.";
                 } else {
                     $izin = "Bisa Pinjam";
                     $status = "Normal";
