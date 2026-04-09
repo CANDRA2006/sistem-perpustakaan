@@ -60,9 +60,7 @@
                 "stok" => 3
             ]
         ];
-        
         // ========== SEARCH FUNCTIONS ==========
-        
         // 1. Cari buku by kode
         function cari_by_kode($buku_list, $kode) {
             foreach ($buku_list as $buku) {

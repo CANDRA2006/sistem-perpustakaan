@@ -1,6 +1,5 @@
 <?php
 // ========== LIBRARY FUNCTIONS PERPUSTAKAAN ==========
- 
 // 1. Format Rupiah
 function format_rupiah($angka) {
     return "Rp " . number_format($angka, 0, ',', '.');

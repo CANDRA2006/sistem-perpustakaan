@@ -21,7 +21,6 @@
             "Web Design Principles"
         ];
         ?>
-        
         <!-- Array Indexed -->
         <div class="card mb-4">
             <div class="card-header bg-primary text-white">
