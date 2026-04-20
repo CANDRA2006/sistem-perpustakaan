@@ -223,7 +223,6 @@ if (!empty($_GET)) {
 
 // EXPORT CSV 
 if (isset($_GET['export']) && $_GET['export'] === 'csv' && empty($errors)) {
-    // Pembersihan buffer 
     if (ob_get_level()) ob_end_clean();
 
     header('Content-Type: text/csv; charset=UTF-8');
@@ -262,10 +261,8 @@ $page = $total_page > 0 ? min($page, $total_page) : 1;
 $start = ($page - 1) * $per_page;
 $hasil_tampil = array_slice($hasil_filter, $start, $per_page);
 
-// HELPER QUERY 
 function build_query(array $override = []): string {
     $params = array_merge($_GET, $override);
-    // Hapus 'export' hanya jika tidak ada di override
     if (!array_key_exists('export', $override)) {
         unset($params['export']);
     }
